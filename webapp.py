@@ -18,6 +18,7 @@ def complete_todo(todo):
 
 text = st.empty()
 st.title("My todo app")
+st.write("This is a minimalist To-do app to track the day-to-day tasks.")
 st.text_input(label="",placeholder="Enter a task",on_change=add_todo,key='new_todo')
 
 for i,j in enumerate(existing_todos):
