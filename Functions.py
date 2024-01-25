@@ -11,4 +11,4 @@ def new_todos(todos,filepath="todos.txt"):
 
 
 if __name__ == "__main__":
-    print("Heallo")
+    print("Called from the main program")

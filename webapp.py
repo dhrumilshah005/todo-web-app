@@ -1,6 +1,7 @@
 import streamlit as st
 import Functions
 import time
+import datetime
 
 existing_todos = Functions.get_todos()
 def add_todo():
@@ -15,9 +16,11 @@ def complete_todo(todo):
     Functions.new_todos(existing_todos)
     st.rerun()
 
-
+now = datetime.datetime.now()
+now = now.strftime("%d-%B-%Y %H:%M:%S")
 text = st.empty()
 st.title("My todo app")
+st.write("This minimalist app will be helpful to manage the day-to-day tasks. Check the Checkbox to mark the task as complete")
 st.text_input(label="",placeholder="Enter a task",on_change=add_todo,key='new_todo')
 
 for i,j in enumerate(existing_todos):
